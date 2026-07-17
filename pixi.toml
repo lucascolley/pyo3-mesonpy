@@ -16,10 +16,7 @@ ignore-pypi-mapping = false
 
 [package.host-dependencies]
 pkg-config = "*"
-meson = {
-  git = "https://github.com/bonzini/meson/tree/",
-  branch = "py-extension-module-again",
-}
+meson.path = "pixi-packages/meson"
 
 [dependencies]
 pyo3-mesonpy.path = "."

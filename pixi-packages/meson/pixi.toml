@@ -1,0 +1,15 @@
+[package]
+name = "meson"
+version = "999"
+
+build = {
+  backend = {
+    name = "pixi-build-python",
+    version = "*",
+  },
+  source = { 
+    git = "https://github.com/bonzini/meson/",
+    branch = "py-extension-module-again",
+  },
+  config.ignore-pypi-mapping = false,
+}
