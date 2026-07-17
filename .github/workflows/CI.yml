@@ -14,6 +14,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-slim, windows-latest, macos-latest, ubuntu-24.04-arm]
+      fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
