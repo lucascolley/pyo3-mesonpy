@@ -2,6 +2,5 @@
 .pixi/*
 !.pixi/config.toml
 build/
-subprojects/**/*
 !subprojects/.wraplock
 target/
