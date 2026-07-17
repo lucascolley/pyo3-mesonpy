@@ -1,0 +1,24 @@
+[workspace]
+authors = ["Lucas Colley <lucas.colley8@gmail.com>"]
+channels = ["https://prefix.dev/conda-forge"]
+name = "pyo3-mesonpy"
+platforms = ["osx-arm64"]
+preview = ["pixi-build"]
+
+[package.build.backend]
+name = "pixi-build-python"
+version = "*"
+
+[package.build.config]
+compilers = ["rust"]
+extra-args = ["-Cbuild-dir=build"]
+ignore-pypi-mapping = false
+
+[package.host-dependencies]
+pkg-config = "*"
+
+[dependencies]
+pyo3-mesonpy.path = "."
+
+[tasks]
+check = "python -c 'import pyo3_mesonpy; print(pyo3_mesonpy.sum_as_string(2, 6))'"
