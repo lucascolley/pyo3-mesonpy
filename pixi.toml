@@ -21,9 +21,6 @@ ignore-pypi-mapping = false
 pkg-config = "*"
 meson.path = "pixi-packages/meson"
 
-[package.run-dependencies]
-python = "*"
-
 [dependencies]
 pyo3-mesonpy.path = "."
 
