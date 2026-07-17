@@ -10,8 +10,11 @@ permissions:
   contents: read
 
 jobs:
-  linux:
-    runs-on: ubuntu-slim
+  check:
+    strategy:
+      matrix:
+        os: [ubuntu-slim, windows-latest, macos-latest, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
 
