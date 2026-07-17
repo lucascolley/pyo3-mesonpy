@@ -1,6 +1,9 @@
 [workspace]
 authors = ["Lucas Colley <lucas.colley8@gmail.com>"]
-channels = ["https://prefix.dev/conda-forge"]
+channels = [
+  "https://prefix.dev/conda-forge/label/rust_dev",
+  "https://prefix.dev/conda-forge",
+]
 name = "pyo3-mesonpy"
 platforms = ["osx-arm64", "linux-64", "linux-aarch64", "win-64"]
 preview = ["pixi-build"]
