@@ -1,7 +1,7 @@
 [workspace]
 authors = ["Lucas Colley <lucas.colley8@gmail.com>"]
 channels = [
-  "https://prefix.dev/conda-forge/label/rust_dev",
+  "https://conda.anaconda.org/conda-forge/label/rust_dev",
   "https://prefix.dev/conda-forge",
 ]
 name = "pyo3-mesonpy"
