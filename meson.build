@@ -1,5 +1,11 @@
 # meson.build
-project('pyo3-mesonpy', 'rust', meson_version: '>=1.11.0')
+project(
+  'pyo3-mesonpy',
+  'rust',
+  meson_version: '>=1.11.0',
+  default_options: ['rust_std=2024'],
+)
+
 py = import('python').find_installation(pure: false)
 rustmod = import('rust')
 
