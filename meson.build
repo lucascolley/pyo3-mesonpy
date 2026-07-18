@@ -3,6 +3,8 @@ project('pyo3-mesonpy', 'rust', meson_version: '>=1.11.0')
 py = import('python').find_installation(pure: false)
 rustmod = import('rust')
 
+py_dep = py.dependency()
+
 cargo_ws = rustmod.workspace()
 pkg = cargo_ws.package()
 
@@ -11,6 +13,6 @@ py.extension_module(
   'src/lib.rs',
   rust_dependency_map : pkg.rust_dependency_map(),
   rust_args: pkg.rust_args(),
-  dependencies : pkg.dependencies(),
+  dependencies : pkg.dependencies() + py_dep,
   install: true,
 )
