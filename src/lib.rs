@@ -1,4 +1,3 @@
-extern crate pyo3;
 use pyo3::prelude::*;
 
 /// A Python module implemented in Rust.
