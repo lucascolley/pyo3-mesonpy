@@ -17,9 +17,6 @@ compilers = ["rust"]
 extra-args = ["-Cbuild-dir=build"]
 ignore-pypi-mapping = false
 
-[package.build-dependencies."if(host_platform == 'win-64')"]
-python = "*"
-
 [package.host-dependencies]
 pkg-config = "*"
 meson.path = "pixi-packages/meson"

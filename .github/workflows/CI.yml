@@ -28,3 +28,10 @@ jobs:
         run: pixi run check
         env:
           BUILD_EDITABLE_PYTHON: false
+
+      - name: Upload Log
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: meson-log
+          path: build/meson-logs/meson-log.txt
