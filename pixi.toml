@@ -19,7 +19,11 @@ ignore-pypi-mapping = false
 
 [package.host-dependencies]
 pkg-config = "*"
-meson.path = "pixi-packages/meson"
+meson = "==1.12.0"
+
+[dev]
+# pull in host deps; the alternative is to set `BUILD_EDITABLE_PYTHON = false`
+pyo3-mesonpy.path = "."
 
 [dependencies]
 pyo3-mesonpy.path = "."
