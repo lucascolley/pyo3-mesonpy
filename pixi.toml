@@ -19,7 +19,7 @@ ignore-pypi-mapping = false
 
 [package.host-dependencies]
 pkg-config = "*"
-meson = "==1.12.0"
+meson.path = "./meson"
 
 [dev]
 # pull in host deps; the alternative is to set `BUILD_EDITABLE_PYTHON = false`
