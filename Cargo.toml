@@ -9,4 +9,5 @@ name = "pyo3_mesonpy"
 crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = "0.29.0"
+pyo3 = { git = "https://github.com/PyO3/pyo3", rev = "refs/pull/6483/head", features = ["extension-module"] }
+pyo3-ffi = { git = "https://github.com/PyO3/pyo3", rev = "refs/pull/6483/head" }

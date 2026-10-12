@@ -1,0 +1,8 @@
+[package]
+name = "meson"
+version = "1.12.99"
+build = {
+  backend.name = "pixi-build-python",
+  config.ignore-pypi-mapping = false,
+  source.git = "https://github.com/mesonbuild/meson",
+}
